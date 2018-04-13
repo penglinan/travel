@@ -1,27 +1,7 @@
-# travel
+<h1 style="text-align:center">Vue项目实战</h1>
+### 安装vue-cli，配置webpack
 
-> A Vue.js project
+	npm i vue-cli -global
+在该文件夹外面执行下面命令，构建一个vue工程
 
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+	vue init webpack my-project
