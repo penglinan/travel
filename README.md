@@ -113,4 +113,18 @@ list.vue
 
 	npm i fastclick -S
 
+使用方法,在main.js中输入
+	
+	import fastClick from 'fastclick'
+	fastClick.attach(document.body)
+
+4.iconfont
+在iconfont上面新建一个travel项目
+5.使用stylus，编写css
+
+	npm i stylus -S
+	npm i stylus-loader -S
+
+### header区域开发
+1rem= html font-size = 50px
 
