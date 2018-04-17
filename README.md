@@ -31,3 +31,86 @@ config放的是项目的配置文件
 config-index.js放基础的信息
 config-dev.env.js放开发环境的基础信息
 config-prod.env.js放生产环境的基础信息
+build放项目打包的webpack的一些东西
+build-webpack.base.conf.js项目中webpack基础配置项
+build-webpack.dev.conf.js项目中webpack开发配置项
+build-webpack.prod.conf.js项目中webpack生产配置项
+
+### 单文件组件与Vue中的路由
+ 文件后缀为.vue的文件，如：app.vue就是单文件组件。
+ 路由就是根据网址的不同，返回不同的内容给用户。
+router-view显示的是当前路由地址所对应的内容
+![](https://i.imgur.com/yZdeYbm.jpg)
+
+index.js
+
+	import Vue from 'vue'
+	import Router from 'vue-router'
+	import Home from '@/pages/home/Home.vue'
+	import List from '@/pages/list/List.vue'
+	
+	Vue.use(Router)
+	
+	export default new Router({
+	  routes: [
+	    {
+	      path: '/',
+	      name: 'Home',
+	      component: Home
+	    },
+	    {
+	      path: '/list',
+	      name: 'List',
+	      component: List
+	    }
+	  ]
+	})
+
+app.vue
+
+	<template>
+	  <div id="app">
+	    <router-view/>
+	  </div>
+	</template>
+	
+	<script>
+	export default {
+	  name: 'App'
+	}
+	</script>
+	
+	<style>
+	
+	</style>
+
+list.vue
+
+	<template>
+	  <div>list</div>
+	</template>
+	<script>
+	export default {
+	  name: 'List'
+	}
+	</script>
+	<style>
+	
+	</style>
+
+
+### 单页面应用与多页面应用
+![](https://i.imgur.com/WvSVc48.jpg)
+![](https://i.imgur.com/Vcvs4K9.jpg)
+
+### 项目初始化
+
+1.添加meta标签，属性
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+2.引入reset.css重置样式，覆盖浏览器内置样式，border.css修复高清手机屏幕的多倍屏问题
+3.安装fastclick，解决某些浏览器，点击延迟300ms的问题,因为这个功能在开发环境和生产环境都用得着，所以用-S（--save）
+
+	npm i fastclick -S
+
+
