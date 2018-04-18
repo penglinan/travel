@@ -127,4 +127,11 @@ list.vue
 
 ### header区域开发
 1rem= html font-size = 50px
+@符号代表src目录
+
+	import '@/assets/styles/reset.css'
+
+在style里面引入的时候要用~@
+
+	@import '~@/assets/styles/varibles.styl'
 
