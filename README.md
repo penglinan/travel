@@ -135,3 +135,33 @@ list.vue
 
 	@import '~@/assets/styles/varibles.styl'
 
+### 轮播图组件
+[https://github.com/surmon-china/vue-awesome-swiper](https://github.com/surmon-china/vue-awesome-swiper "插件官网")
+
+	npm i vue-awesome-swiper@2.6.7 -S
+
+如何在全局使用？
+
+	在main.js里面
+	import VueAwesomeSwiper from 'vue-awesome-swiper'
+	import 'swiper/dist/css/swiper.css'
+	Vue.use(VueAwesomeSwiper, /* { default global options } */)
+
+![](https://i.imgur.com/Da6TXHT.jpg)
+
+es6写法
+	data(){
+		return {}
+	}
+es5写法
+
+	data:function(){
+		return {}
+	}
+
+设置轮播图外层包裹的标签样式，padding-bottom有图片宽高比得出
+
+	overflow:hidden
+    width:100%
+	height:0
+	padding-bottom:31.25%
